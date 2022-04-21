@@ -21,5 +21,5 @@ Numpy - MAC
 
 python#versionpython  -m pip install numpy
 
-Hecho lo anterior y tras la ejecución del programa se desplegará una pequeña interfaz la cual simula las teclas de una octava de un piano. 
+Hecho lo anterior y tras la ejecución del programa se le consultará al usuario en que octava desea ubicarse y se desplegará una pequeña interfaz la cual simula las teclas de una octava de un piano. 
 Claramente al presionar alguna de las teclas se ejecutará un sonido correspondiente a la nota.
