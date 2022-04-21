@@ -6,13 +6,19 @@
 Para hacer uso de la prueba disponible hay que hacer instalación de las siguientes librerías:
 
 Sounddevice - Windows
+
 py -#version   -m pip install sounddevice
+
 Sounddevice - MAC
+
 python#versionpython  -m pip install sounddevice
 
 Numpy - Windows
+
 py -#version   -m pip install numpy
+
 Numpy - MAC
+
 python#versionpython  -m pip install numpy
 
 Hecho lo anterior y tras la ejecución del programa se desplegará una pequeña interfaz la cual simula las teclas de una octava de un piano. 
