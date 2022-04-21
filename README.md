@@ -6,12 +6,12 @@
 Para hacer uso de la prueba disponible hay que hacer instalación de las siguientes librerías:
 
 Sounddevice - Windows
-pip install sounddevice
+py -#version   -m pip install sounddevice
 Sounddevice - MAC
 python#versionpython  -m pip install sounddevice
 
 Numpy - Windows
-pip install numpy
+py -#version   -m pip install numpy
 Numpy - MAC
 python#versionpython  -m pip install numpy
 
