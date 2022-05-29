@@ -9,6 +9,7 @@ class SonidoP():
 
     def GenerarSonido(wave):
         sd.play(wave, 44100)
+        sd.wait()
 
     def sonarO(wave):
         #if (onda == 1):
