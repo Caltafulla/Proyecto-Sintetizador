@@ -84,6 +84,28 @@ def asignar(num, vco, numind):
         boton3Sa = tkinter.Button(image = SelectedSaw, command= lambda: asignar(3, vco3,9), relief = FLAT)
         boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
         
+def reset(nmvco):
+    if(nmvco == 1):
+        boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1, 1), relief = FLAT)
+        boton1S.place(x = 226, y = 87, height = 70, width = 70)
+        boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1, 2), relief = FLAT)
+        boton1Sq.place(x = 323, y = 87, height = 70, width = 70)
+        boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1, 3), relief = FLAT)
+        boton1Sa.place(x = 420, y = 87, height = 70, width = 70)
+    elif (nmvco == 2):
+        boton2S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco2,4), relief = FLAT)
+        boton2S.place(x = 226, y = 186, height = 70, width = 70)
+        boton2Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco2,5), relief = FLAT)
+        boton2Sq.place(x = 323, y = 186, height = 70, width = 70)
+        boton2Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco2,6), relief = FLAT)
+        boton2Sa.place(x = 420, y = 186, height = 70, width = 70)
+    elif (nmvco == 3):
+        boton3S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco3,7), relief = FLAT)
+        boton3S.place(x = 226, y = 285, height = 70, width = 70)
+        boton3Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco3,8), relief = FLAT)
+        boton3Sq.place(x = 323, y = 285, height = 70, width = 70)
+        boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3,9), relief = FLAT)
+        boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
 
 #FONDO
 imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
@@ -127,8 +149,12 @@ boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3,9), reli
 boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
 
 #BOTONES RESET
-Rset1 = tkinter.Button(image = ResetBtt, relief = FLAT, borderwidth = 0)
+Rset1 = tkinter.Button(image = ResetBtt, command = lambda: reset(1), relief = FLAT, borderwidth = 0)
 Rset1.place(x = 12, y = 107, height = 33, width = 33)
+Rset2 = tkinter.Button(image = ResetBtt, command = lambda: reset(2), relief = FLAT, borderwidth = 0)
+Rset2.place(x = 12, y = 206, height = 33, width = 33)
+Rset3 = tkinter.Button(image = ResetBtt, command = lambda: reset(3), relief = FLAT, borderwidth = 0)
+Rset3.place(x = 12, y = 305, height = 33, width = 33)
 
 #BOTONES VOLUMEN / TONO
 
