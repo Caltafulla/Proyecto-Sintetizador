@@ -17,31 +17,73 @@ vco2 = VCO(0, 0 ,0 ,0)
 vco3 = VCO(0, 0 ,0 ,0)
 vcog = [vco1, vco2, vco3]
 
-def asignar(num, vco):
+def asignar(num, vco, numind):
     vco.onda = num
-    slind = num - 1
 
-    if (num == 1 and slind == 0):
-        boton1S = tkinter.Button(image = SelectedSine, command= lambda: asignar(1, vco1), relief = FLAT)
+    if (numind == 1):
+        boton1S = tkinter.Button(image = SelectedSine, command= lambda: asignar(1, vco1,1), relief = FLAT)
         boton1S.place(x = 226, y = 87, height = 70, width = 70)
-        boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1), relief = FLAT)
+        boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1,2), relief = FLAT)
         boton1Sq.place(x = 323, y = 87, height = 70, width = 70)
-        boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1), relief = FLAT)
+        boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1,3), relief = FLAT)
         boton1Sa.place(x = 420, y = 87, height = 70, width = 70)
-    elif (num == 2 and slind ==1):
-        boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1), relief = FLAT)
+    elif (numind ==2):
+        boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1,1), relief = FLAT)
         boton1S.place(x = 226, y = 87, height = 70, width = 70)
-        boton1Sq = tkinter.Button(image = SelectedSquare, command= lambda: asignar(2, vco1), relief = FLAT)
+        boton1Sq = tkinter.Button(image = SelectedSquare, command= lambda: asignar(2, vco1,2), relief = FLAT)
         boton1Sq.place(x = 323, y = 87, height = 70, width = 70)
-        boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1), relief = FLAT)
+        boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1,3), relief = FLAT)
         boton1Sa.place(x = 420, y = 87, height = 70, width = 70)
-    elif (num == 3 and slind ==2):
-        boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1), relief = FLAT)
+    elif (numind ==3):
+        boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1,1), relief = FLAT)
         boton1S.place(x = 226, y = 87, height = 70, width = 70)
-        boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1), relief = FLAT)
+        boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1,2), relief = FLAT)
         boton1Sq.place(x = 323, y = 87, height = 70, width = 70)
-        boton1Sa = tkinter.Button(image = SelectedSaw, command= lambda: asignar(3, vco1), relief = FLAT)
+        boton1Sa = tkinter.Button(image = SelectedSaw, command= lambda: asignar(3, vco1,3), relief = FLAT)
         boton1Sa.place(x = 420, y = 87, height = 70, width = 70)
+    elif (numind ==4):
+        boton2S = tkinter.Button(image = SelectedSine, command= lambda: asignar(1, vco2,4), relief = FLAT)
+        boton2S.place(x = 226, y = 186, height = 70, width = 70)
+        boton2Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco2,5), relief = FLAT)
+        boton2Sq.place(x = 323, y = 186, height = 70, width = 70)
+        boton2Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco2,6), relief = FLAT)
+        boton2Sa.place(x = 420, y = 186, height = 70, width = 70)
+    elif (numind ==5):
+        boton2S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco2,4), relief = FLAT)
+        boton2S.place(x = 226, y = 186, height = 70, width = 70)
+        boton2Sq = tkinter.Button(image = SelectedSquare, command= lambda: asignar(2, vco2,5), relief = FLAT)
+        boton2Sq.place(x = 323, y = 186, height = 70, width = 70)
+        boton2Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco2,6), relief = FLAT)
+        boton2Sa.place(x = 420, y = 186, height = 70, width = 70)
+    elif (numind ==6):
+        boton2S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco2,4), relief = FLAT)
+        boton2S.place(x = 226, y = 186, height = 70, width = 70)
+        boton2Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco2,5), relief = FLAT)
+        boton2Sq.place(x = 323, y = 186, height = 70, width = 70)
+        boton2Sa = tkinter.Button(image = SelectedSaw, command= lambda: asignar(3, vco2,6), relief = FLAT)
+        boton2Sa.place(x = 420, y = 186, height = 70, width = 70)
+    elif (numind ==7):
+        boton3S = tkinter.Button(image = SelectedSine, command= lambda: asignar(1, vco3,7), relief = FLAT)
+        boton3S.place(x = 226, y = 285, height = 70, width = 70)
+        boton3Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco3,8), relief = FLAT)
+        boton3Sq.place(x = 323, y = 285, height = 70, width = 70)
+        boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3,9), relief = FLAT)
+        boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
+    elif (numind ==8):
+        boton3S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco3,7), relief = FLAT)
+        boton3S.place(x = 226, y = 285, height = 70, width = 70)
+        boton3Sq = tkinter.Button(image = SelectedSquare, command= lambda: asignar(2, vco3,8), relief = FLAT)
+        boton3Sq.place(x = 323, y = 285, height = 70, width = 70)
+        boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3,9), relief = FLAT)
+        boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
+    elif (numind ==9):
+        boton3S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco3,7), relief = FLAT)
+        boton3S.place(x = 226, y = 285, height = 70, width = 70)
+        boton3Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco3,8), relief = FLAT)
+        boton3Sq.place(x = 323, y = 285, height = 70, width = 70)
+        boton3Sa = tkinter.Button(image = SelectedSaw, command= lambda: asignar(3, vco3,9), relief = FLAT)
+        boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
+        
 
 #FONDO
 imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
@@ -59,27 +101,27 @@ ResetBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Reload-09.png'))
 
 #BOTONES VCO1
 
-boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1), relief = FLAT)
+boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1, 1), relief = FLAT)
 boton1S.place(x = 226, y = 87, height = 70, width = 70)
-boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1), relief = FLAT)
+boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1, 2), relief = FLAT)
 boton1Sq.place(x = 323, y = 87, height = 70, width = 70)
-boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1), relief = FLAT)
+boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1, 3), relief = FLAT)
 boton1Sa.place(x = 420, y = 87, height = 70, width = 70)
 
 #BOTONES VCO2
-boton2S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco2), relief = FLAT)
+boton2S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco2,4), relief = FLAT)
 boton2S.place(x = 226, y = 186, height = 70, width = 70)
-boton2Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco2), relief = FLAT)
+boton2Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco2,5), relief = FLAT)
 boton2Sq.place(x = 323, y = 186, height = 70, width = 70)
-boton2Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco2), relief = FLAT)
+boton2Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco2,6), relief = FLAT)
 boton2Sa.place(x = 420, y = 186, height = 70, width = 70)
 
 #BOTONES VCO3
-boton3S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco3), relief = FLAT)
+boton3S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco3,7), relief = FLAT)
 boton3S.place(x = 226, y = 285, height = 70, width = 70)
-boton3Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco3), relief = FLAT)
+boton3Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco3,8), relief = FLAT)
 boton3Sq.place(x = 323, y = 285, height = 70, width = 70)
-boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3), relief = FLAT)
+boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3,9), relief = FLAT)
 boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
 
 #BOTONES RESET
