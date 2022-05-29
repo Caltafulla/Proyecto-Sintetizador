@@ -90,7 +90,7 @@ imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo
 label = tkinter.Label(image=imagen)
 label.pack()
 
-#CARGA BOTONES VCO/RESET
+#CARGA BOTONES VCO/RESET/VOLUME+-
 Sine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-03.png'))
 Square = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-04.png'))
 Saw = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-05.png'))
@@ -98,6 +98,8 @@ SelectedSine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-0
 SelectedSquare = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-07.png'))
 SelectedSaw = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-08.png'))
 ResetBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Reload-09.png'))
+MásBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomeno-17.png'))
+MenosBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomeno-18.png'))
 
 #BOTONES VCO1
 
@@ -128,8 +130,39 @@ boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
 Rset1 = tkinter.Button(image = ResetBtt, relief = FLAT, borderwidth = 0)
 Rset1.place(x = 12, y = 107, height = 33, width = 33)
 
-#BOTONES PIANO
+#BOTONES VOLUMEN / TONO
 
+#VCO1
+VolumemsVCO1 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+VolumemsVCO1.place(x = 868, y = 91, height = 26, width = 26)
+VolumemnVCO1 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+VolumemnVCO1.place(x = 673, y = 91, height = 26, width = 26)
+TonemsVCO1 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+TonemsVCO1.place(x = 868, y = 131, height = 26, width = 26)
+TonemnVCO1 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+TonemnVCO1.place(x = 673, y = 131, height = 26, width = 26)
+
+#VCO2
+VolumemsVCO2 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+VolumemsVCO2.place(x = 868, y = 190, height = 26, width = 26)
+VolumemnVCO2 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+VolumemnVCO2.place(x = 673, y = 190, height = 26, width = 26)
+TonemsVCO2 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+TonemsVCO2.place(x = 868, y = 230, height = 26, width = 26)
+TonemnVCO2 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+TonemnVCO2.place(x = 673, y = 230, height = 26, width = 26)
+
+#VCO3
+VolumemsVCO3 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+VolumemsVCO3.place(x = 868, y = 289, height = 26, width = 26)
+VolumemnVCO3 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+VolumemnVCO3.place(x = 673, y = 289, height = 26, width = 26)
+TonemsVCO3 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+TonemsVCO3.place(x = 868, y = 329, height = 26, width = 26)
+TonemnVCO3 = tkinter.Button(image = MásBtt, relief = FLAT, borderwidth = 0)
+TonemnVCO3.place(x = 673, y = 329, height = 26, width = 26)
+
+#BOTONES PIANO
 #OCTAVA 1
 Do1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(1, 4).frecuencia()))
 Do1.place(x = 115, y = 430, height = 250, width = 50)
