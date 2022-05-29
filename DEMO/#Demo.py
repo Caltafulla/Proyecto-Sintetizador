@@ -1,4 +1,5 @@
 #Demo
+from tkinter import *
 import tkinter
 from turtle import width
 from PIL import ImageTk, Image
@@ -20,45 +21,49 @@ def asignar(num, vco):
     vco.onda = num
 
 #FONDO
-imagen = ImageTk.PhotoImage(Image.open(r'ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
+imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
 label = tkinter.Label(image=imagen)
 label.pack()
 
+#CARGA BOTONES VCO/RESET
+Sine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-03.png'))
+Square = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-04.png'))
+Saw = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-05.png'))
+SelectedSine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-06.png'))
+SelectedSquare = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-07.png'))
+SelectedSaw = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-08.png'))
+ResetBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Reload-09.png'))
+
 #BOTONES VCO1
-VCO1S = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-03.png'))
-boton1S = tkinter.Button(image = VCO1S, command= lambda: asignar(1, vco1))
+
+boton1S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco1))
 boton1S.place(x = 226, y = 87, height = 70, width = 70)
-VCO1Sq = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-04.png'))
-boton1Sq = tkinter.Button(image = VCO1Sq, command= lambda: asignar(2, vco1))
+boton1Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco1))
 boton1Sq.place(x = 323, y = 87, height = 70, width = 70)
-VCO1Sa = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-05.png'))
-boton1Sa = tkinter.Button(image = VCO1Sa, command= lambda: asignar(3, vco1))
+boton1Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco1))
 boton1Sa.place(x = 420, y = 87, height = 70, width = 70)
 
 #BOTONES VCO2
-VCO2S = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-03.png'))
-boton2S = tkinter.Button(image = VCO2S, command= lambda: asignar(1, vco2))
+boton2S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco2))
 boton2S.place(x = 226, y = 186, height = 70, width = 70)
-VCO2Sq = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-04.png'))
-boton2Sq = tkinter.Button(image = VCO2Sq, command= lambda: asignar(2, vco2))
+boton2Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco2))
 boton2Sq.place(x = 323, y = 186, height = 70, width = 70)
-VCO2Sa = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-05.png'))
-boton2Sa = tkinter.Button(image = VCO2Sa, command= lambda: asignar(3, vco2))
+boton2Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco2))
 boton2Sa.place(x = 420, y = 186, height = 70, width = 70)
 
 #BOTONES VCO3
-VCO3S = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-03.png'))
-boton3S = tkinter.Button(image = VCO3S, command= lambda: asignar(1, vco3))
+boton3S = tkinter.Button(image = Sine, command= lambda: asignar(1, vco3))
 boton3S.place(x = 226, y = 285, height = 70, width = 70)
-VCO3Sq = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-04.png'))
-boton3Sq = tkinter.Button(image = VCO3Sq, command= lambda: asignar(2, vco3))
+boton3Sq = tkinter.Button(image = Square, command= lambda: asignar(2, vco3))
 boton3Sq.place(x = 323, y = 285, height = 70, width = 70)
-VCO3Sa = ImageTk.PhotoImage(Image.open(r'ImageSources\Synth-05.png'))
-boton3Sa = tkinter.Button(image = VCO3Sa, command= lambda: asignar(3, vco3))
+boton3Sa = tkinter.Button(image = Saw, command= lambda: asignar(3, vco3))
 boton3Sa.place(x = 420, y = 285, height = 70, width = 70)
 
-#BOTONES PIANO
+#BOTONES RESET
+Rset1 = tkinter.Button(image = ResetBtt, relief = FLAT, borderwidth = 0)
+Rset1.place(x = 12, y = 107, height = 33, width = 33)
 
+#BOTONES PIANO
 
 #OCTAVA 1
 Do1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(1, 4).frecuencia()))
