@@ -13,18 +13,10 @@ class SonidoP():
         sd.wait()
 
     def sonarO(wave):
-        #if (onda == 1):
-        #    wave = Sine.generar(hz)
-        #    SonidoP.GenerarSonido(wave)
-        #elif (onda == 2):
-        #    wave = Square.generar(hz)
-        #    SonidoP.GenerarSonido(wave)
-        #elif (onda == 3):
-        #    wave = Saw.generar(hz)
         SonidoP.GenerarSonido(wave)
 
     def playN(sonarO, onda, hz, x):
-        # 1
+        
         threads = []
         
         for VCO in onda:
@@ -33,7 +25,6 @@ class SonidoP():
                 th = threading.Thread(target=lambda: sonarO(VCO.f(VCO.v, hz(VCO.hzb, x))))
                 th.start()
                 threads.append(th)
-                
-        # 2    
+
         for th in threads:
             th.join()
