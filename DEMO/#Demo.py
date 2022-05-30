@@ -14,9 +14,9 @@ sn = SonidoP.playN
 ventana = tkinter.Tk()
 #NOMBRE DE VENTANA
 ventana.title("Synth")
-vco1 = VCO(0, 0 ,100 ,0)
-vco2 = VCO(0, 0 ,100 ,0)
-vco3 = VCO(0, 0 ,100 ,0)
+vco1 = VCO(0, 0 ,50 ,0)
+vco2 = VCO(0, 0 ,50 ,0)
+vco3 = VCO(0, 0 ,50 ,0)
 vcog = [vco1, vco2, vco3]
 
 def asignar(num, vco, numind):
