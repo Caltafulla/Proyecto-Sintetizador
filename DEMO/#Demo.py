@@ -125,15 +125,18 @@ label = tkinter.Label(image=imagen)
 label.pack()
 
 #Lables Volumen
+#VCO1
 imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
 labelv1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
 labelv1.place(x = 732, y = 89)
 labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
 labelvco1V.place(x = 778, y = 94)
+#VCO2
 labelv2 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
 labelv2.place(x = 732, y = 188)
 labelvco2V = tkinter.Label(text = vco2.v, bg= "#141414", fg= "white")
 labelvco2V.place(x = 778, y = 194)
+#VCO3
 labelv3 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
 labelv3.place(x = 732, y = 287)
 labelvco3V = tkinter.Label(text = vco3.v, bg= "#141414", fg= "white")
