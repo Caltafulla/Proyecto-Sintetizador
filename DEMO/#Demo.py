@@ -113,6 +113,8 @@ def reset(nmvco):
 
 def actv(vco, i):
     vco.volumen(i)
+    labelv = tkinter.Label(image= imagenv, relief = FLAT)
+    labelv.place(x = 769, y = 89)
     labelvco1V = tkinter.Label(text = vco1.v, bg= "black", fg= "white")
     labelvco1V.place(x = 778, y = 97)
 
@@ -122,6 +124,8 @@ label = tkinter.Label(image=imagen)
 label.pack()
 
 #Lables Volumen
+imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
+labelv = tkinter.Label(image= imagenv, relief = FLAT)
 labelvco1V = tkinter.Label(text = vco1.v, bg= "black", fg= "white")
 labelvco1V.place(x = 778, y = 97)
 
