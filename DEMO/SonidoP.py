@@ -27,12 +27,12 @@ class SonidoP():
         # 1
         threads = []
         
-        for tipoO in onda:
-            tipoO.tona()
-            if tipoO.onda != 0:
-                plt.plot(tipoO.f(hz(tipoO.hzb, x))[:1000])
+        for VCO in onda:
+            VCO.tona()
+            if VCO.onda != 0:
+                plt.plot(VCO.f(VCO.v,hz(VCO.hzb, x))[:1000])
                 plt.show()
-                th = threading.Thread(target=lambda: sonarO(tipoO.f(hz(tipoO.hzb, x))))
+                th = threading.Thread(target=lambda: sonarO(VCO.f(VCO.v, hz(VCO.hzb, x))))
                 th.start()
                 threads.append(th)
                 
