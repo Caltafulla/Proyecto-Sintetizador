@@ -3,7 +3,8 @@ import numpy as np
 
 class VCO:
 
-    def __init__(self, valoro, timbre, volumenRL, onda ,hzb = 0):
+    def __init__(self, valoro, timbre, volumenRL, onda, num, hzb = 0):
+        self.numvco = num
         self.hzb = hzb
         self.vo = valoro
         self.timbre = timbre
