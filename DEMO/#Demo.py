@@ -112,23 +112,46 @@ def reset(nmvco):
         boton3Sa.place(x = 464, y = 285, height = 70, width = 70)
         vco3.onda = 0
 
+#Imagen de fondo para los labels de volumen y tono
+imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
+
 def actv(vco, i):
     vco.volumen(i)
-    if (vco.numvco == 1):
-        labelv1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
-        labelv1.place(x = 732, y = 89)
-        labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
-        labelvco1V.place(x = 778, y = 94)
-    elif (vco.numvco == 2):
-        labelv2 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
-        labelv2.place(x = 732, y = 188)
-        labelvco2V = tkinter.Label(text = vco2.v, bg= "#141414", fg= "white")
-        labelvco2V.place(x = 778, y = 194)
-    elif (vco.numvco == 3):
-        labelv3 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
-        labelv3.place(x = 732, y = 287)
-        labelvco3V = tkinter.Label(text = vco3.v, bg= "#141414", fg= "white")
-        labelvco3V.place(x = 778, y = 293)
+    if (vco.v >= 0 and vco.v <= 100):
+        if (vco.numvco == 1):
+            labelv1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+            labelv1.place(x = 732, y = 89)
+            labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
+            labelvco1V.place(x = 778, y = 94)
+        elif (vco.numvco == 2):
+            labelv2 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+            labelv2.place(x = 732, y = 188)
+            labelvco2V = tkinter.Label(text = vco2.v, bg= "#141414", fg= "white")
+            labelvco2V.place(x = 778, y = 194)
+        elif (vco.numvco == 3):
+            labelv3 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+            labelv3.place(x = 732, y = 287)
+            labelvco3V = tkinter.Label(text = vco3.v, bg= "#141414", fg= "white")
+            labelvco3V.place(x = 778, y = 293)
+
+def actt(vco, i):
+    vco.addSemi(i)
+    if (vco.hzb >= -12 and vco.hzb <= 12):
+        if (vco.numvco == 1):
+            labetn1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+            labetn1.place(x = 732, y = 129)
+            labelvco1T = tkinter.Label(text = vco1.hzb, bg= "#141414", fg= "white")
+            labelvco1T.place(x = 778, y = 135)
+        elif (vco.numvco == 2):
+            labetn2 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+            labetn2.place(x = 732, y = 228)
+            labelvco2T = tkinter.Label(text = vco2.hzb, bg= "#141414", fg= "white")
+            labelvco2T.place(x = 778, y = 234)
+        elif (vco.numvco == 3):
+            labetn3 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+            labetn3.place(x = 732, y = 327)
+            labelvco3T = tkinter.Label(text = vco3.hzb, bg= "#141414", fg= "white")
+            labelvco3T.place(x = 778, y = 333)
 
 #FONDO
 imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
@@ -137,7 +160,6 @@ label.pack()
 
 #Lables Volumen
 #VCO1
-imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
 labelv1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
 labelv1.place(x = 732, y = 89)
 labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
@@ -223,9 +245,9 @@ VolumemsVCO1 = tkinter.Button(image = MenosBtt, comman = lambda: actv(vco1, 5), 
 VolumemsVCO1.place(x = 850, y = 91, height = 26, width = 26)
 VolumemnVCO1 = tkinter.Button(image = MásBtt, comman = lambda: actv(vco1, -5), relief = FLAT, borderwidth = 0)
 VolumemnVCO1.place(x = 700, y = 91, height = 26, width = 26)
-TonemsVCO1 = tkinter.Button(image = MenosBtt, command = lambda: vco1.addSemi(1),relief = FLAT, borderwidth = 0)
+TonemsVCO1 = tkinter.Button(image = MenosBtt, command = lambda: actt(vco1, 1),relief = FLAT, borderwidth = 0)
 TonemsVCO1.place(x = 850, y = 131, height = 26, width = 26)
-TonemnVCO1 = tkinter.Button(image = MásBtt, command = lambda: vco1.addSemi(-1), relief = FLAT, borderwidth = 0)
+TonemnVCO1 = tkinter.Button(image = MásBtt, command = lambda: actt(vco1, -1), relief = FLAT, borderwidth = 0)
 TonemnVCO1.place(x = 700, y = 131, height = 26, width = 26)
 
 #VCO2
@@ -233,9 +255,9 @@ VolumemsVCO2 = tkinter.Button(image = MenosBtt, comman = lambda: actv(vco2, 5), 
 VolumemsVCO2.place(x = 850, y = 190, height = 26, width = 26)
 VolumemnVCO2 = tkinter.Button(image = MásBtt, comman = lambda: actv(vco2, -5), relief = FLAT, borderwidth = 0)
 VolumemnVCO2.place(x = 700, y = 190, height = 26, width = 26)
-TonemsVCO2 = tkinter.Button(image = MenosBtt, command = lambda: vco2.addSemi(1), relief = FLAT, borderwidth = 0)
+TonemsVCO2 = tkinter.Button(image = MenosBtt, command = lambda: actt(vco2, 1), relief = FLAT, borderwidth = 0)
 TonemsVCO2.place(x = 850, y = 230, height = 26, width = 26)
-TonemnVCO2 = tkinter.Button(image = MásBtt, command = lambda: vco2.addSemi(-1), relief = FLAT, borderwidth = 0)
+TonemnVCO2 = tkinter.Button(image = MásBtt, command = lambda: actt(vco2, -1), relief = FLAT, borderwidth = 0)
 TonemnVCO2.place(x = 700, y = 230, height = 26, width = 26)
 
 #VCO3
@@ -243,9 +265,9 @@ VolumemsVCO3 = tkinter.Button(image = MenosBtt, comman = lambda: actv(vco3, 5), 
 VolumemsVCO3.place(x = 850, y = 289, height = 26, width = 26)
 VolumemnVCO3 = tkinter.Button(image = MásBtt, command = lambda: actv(vco3, -5), relief = FLAT, borderwidth = 0)
 VolumemnVCO3.place(x = 700, y = 289, height = 26, width = 26)
-TonemsVCO3 = tkinter.Button(image = MenosBtt, command = lambda: vco3.addSemi(1), relief = FLAT, borderwidth = 0)
+TonemsVCO3 = tkinter.Button(image = MenosBtt, command = lambda: actt(vco3, 1), relief = FLAT, borderwidth = 0)
 TonemsVCO3.place(x = 850, y = 329, height = 26, width = 26)
-TonemnVCO3 = tkinter.Button(image = MásBtt, command = lambda: vco3.addSemi(-1), relief = FLAT, borderwidth = 0)
+TonemnVCO3 = tkinter.Button(image = MásBtt, command = lambda: actt(vco3, -1), relief = FLAT, borderwidth = 0)
 TonemnVCO3.place(x = 700, y = 329, height = 26, width = 26)
 
 #BOTONES OCTAVA ACTUAL
