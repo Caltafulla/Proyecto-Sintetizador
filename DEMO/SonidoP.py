@@ -29,7 +29,7 @@ class SonidoP():
         for tipoO in onda:
             tipoO.tona()
             if tipoO.onda != 0:
-                th = threading.Thread(target=lambda: sonarO(tipoO.f(hz)))
+                th = threading.Thread(target=lambda: sonarO(tipoO.f(hz(tipoO.hzb))))
                 th.start()
                 threads.append(th)
                 

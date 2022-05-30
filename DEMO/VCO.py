@@ -3,7 +3,8 @@ import numpy as np
 
 class VCO:
 
-    def __init__(self, valoro, timbre, volumenRL, onda):
+    def __init__(self, valoro, timbre, volumenRL, onda ,hzb = 0):
+        self.hzb = hzb
         self.vo = valoro
         self.timbre = timbre
         self.rl = volumenRL
@@ -17,6 +18,10 @@ class VCO:
             self.f = Square.generar
         elif (self.onda == 3):
             self.f = Saw.generar
+
+    def addSemi(self, semi):
+        if (self.hzb + semi <= 12 and self.hzb + semi >= -12):
+            self.hzb = self.hzb + semi
 
 class Sine:
     def generar(hz: int):
