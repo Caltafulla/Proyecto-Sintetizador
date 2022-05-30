@@ -37,7 +37,7 @@ class Square:
         framerate = 44100
         time = 1000
         t = np.linspace(0, time / 1000, int(framerate * time / 1000))
-        wave = ((11*(np.sin((2 * np.pi * hz * t))) + 3*(np.sin((2 * np.pi * hz * t)/(1/3))) + (14/10)*(np.sin((2 * np.pi * hz * t)/(1/5))) + (7/10)*(np.sin((2 * np.pi * hz * t)/(1/7))) + (15/100)*(np.sin((2 * np.pi * hz * t)/(1/9))))/(85/10))
+        wave = ((11*(np.sin((2 * np.pi * hz * t))) + 3*(np.sin((2 * np.pi * hz * t)/(1/3))) + (14/10)*(np.sin((2 * np.pi * hz * t)/(1/5))) + (7/10)*(np.sin((2 * np.pi * hz * t)/(1/7))) + (15/100)*(np.sin((2 * np.pi * hz * t)/(1/9))))/(90/10))
         return wave
 
 

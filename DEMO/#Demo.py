@@ -6,7 +6,9 @@ from PIL import ImageTk, Image
 from setuptools import Command
 from SonidoP import SonidoP
 from VCO import VCO
-from PianoM import piano
+from PianoM import piano as p
+
+piano = p()
 
 sn = SonidoP.playN
 ventana = tkinter.Tk()
@@ -19,7 +21,6 @@ vcog = [vco1, vco2, vco3]
 
 def asignar(num, vco, numind):
     vco.onda = num
-
     if (numind == 1):
         boton1S = tkinter.Button(image = SelectedSine, command= lambda: asignar(1, vco1,1), relief = FLAT)
         boton1S.place(x = 226, y = 87, height = 70, width = 70)
@@ -193,68 +194,68 @@ TonemnVCO3 = tkinter.Button(image = MásBtt, command = lambda: vco3.addSemi(-1),
 TonemnVCO3.place(x = 673, y = 329, height = 26, width = 26)
 
 #BOTONES OCTAVA ACTUAL
-Aumento = tkinter.Button(image = MásBttbig, relief = FLAT, borderwidth = 0)
+Aumento = tkinter.Button(image = MásBttbig, command= lambda: piano.octavab(1), relief = FLAT, borderwidth = 0)
 Aumento.place(x = 53, y = 502, height = 37, width = 37)
-Dismin = tkinter.Button(image = MenosBttbig, relief = FLAT, borderwidth = 0)
+Dismin = tkinter.Button(image = MenosBttbig, command= lambda: piano.octavab(-1), relief = FLAT, borderwidth = 0)
 Dismin.place(x = 53, y = 622, height = 37, width = 37)
 
 #BOTONES PIANO
 #OCTAVA 1
-Do1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(1, 4).frecuencia))
+Do1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 0))
 Do1.place(x = 120, y = 430, height = 250, width = 50)
-Re1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(3, 4).frecuencia))
+Re1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 2))
 Re1.place(x = 170, y = 430, height = 250, width = 50)
-Mi1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(5, 4).frecuencia))
+Mi1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 4))
 Mi1.place(x = 220, y = 430, height = 250, width = 50)
-Fa1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(6, 4).frecuencia))
+Fa1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 5))
 Fa1.place(x = 270, y = 430, height = 250, width = 50)
-Sol1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(8, 4).frecuencia))
+Sol1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 7))
 Sol1.place(x = 320, y = 430, height = 250, width = 50)
-La1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(10, 4).frecuencia))
+La1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 9))
 La1.place(x = 370, y = 430, height = 250, width = 50)
-Si1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(12, 4).frecuencia))
+Si1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 11))
 Si1.place(x = 420, y = 430, height = 250, width = 50)
 
 #OCTAVA 2
-Do2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(13, 4).frecuencia))
+Do2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 12))
 Do2.place(x = 470, y = 430, height = 250, width = 50)
-Re2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(15, 4).frecuencia))
+Re2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 14))
 Re2.place(x = 520, y = 430, height = 250, width = 50)
-Mi2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(17, 4).frecuencia))
+Mi2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 16))
 Mi2.place(x = 570, y = 430, height = 250, width = 50)
-Fa2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(18, 4).frecuencia))
+Fa2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 17))
 Fa2.place(x = 620, y = 430, height = 250, width = 50)
-Sol2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(20, 4).frecuencia))
+Sol2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 19))
 Sol2.place(x = 670, y = 430, height = 250, width = 50)
-La2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(22, 4).frecuencia))
+La2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 21))
 La2.place(x = 720, y = 430, height = 250, width = 50)
-Si2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(24, 4).frecuencia))
+Si2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 23))
 Si2.place(x = 770, y = 430, height = 250, width = 50)
-Do3 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(25, 4).frecuencia))
+Do3 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 24))
 Do3.place(x = 820, y = 430, height = 250, width = 50)
 
 #NEGRAS
 #OCTAVA 1
-DoS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(2, 4).frecuencia), bg ="black")
+DoS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 1), bg ="black")
 DoS1.place(x = 155, y = 430, height = 150, width = 30)
-ReS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(4, 4).frecuencia), bg ="black")
+ReS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 3), bg ="black")
 ReS1.place(x = 205, y = 430, height = 150, width = 30)
-FaS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(7, 4).frecuencia), bg ="black")
+FaS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 6), bg ="black")
 FaS1.place(x = 305, y = 430, height = 150, width = 30)
-SolS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(9, 4).frecuencia), bg ="black")
+SolS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 8), bg ="black")
 SolS1.place(x = 355, y = 430, height = 150, width = 30)
-LaS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(11, 4).frecuencia), bg ="black")
+LaS1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 10), bg ="black")
 LaS1.place(x = 405, y = 430, height = 150, width = 30)
 
 #OCTAVA 2
-DoS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(14, 4).frecuencia), bg ="black")
+DoS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 13), bg ="black")
 DoS2.place(x = 505, y = 430, height = 150, width = 30)
-ReS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(16, 4).frecuencia), bg ="black")
+ReS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 15), bg ="black")
 ReS2.place(x = 555, y = 430, height = 150, width = 30)
-FaS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(19, 4).frecuencia), bg ="black")
+FaS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 18), bg ="black")
 FaS2.place(x = 655, y = 430, height = 150, width = 30)
-SolS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(21, 4).frecuencia), bg ="black")
+SolS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 20), bg ="black")
 SolS2.place(x = 705, y = 430, height = 150, width = 30)
-LaS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano(23, 4).frecuencia), bg ="black")
+LaS2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 22), bg ="black")
 LaS2.place(x = 755, y = 430, height = 150, width = 30)
 ventana.mainloop()

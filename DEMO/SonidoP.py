@@ -1,6 +1,7 @@
 import sounddevice as sd
 from VCO import Sine, Square, Saw
 import threading
+import matplotlib.pyplot as plt
 
 class SonidoP():
     def __init__(self, volume, adsr):
@@ -22,14 +23,16 @@ class SonidoP():
         #    wave = Saw.generar(hz)
         SonidoP.GenerarSonido(wave)
 
-    def playN(sonarO, onda, hz):
+    def playN(sonarO, onda, hz, x):
         # 1
         threads = []
         
         for tipoO in onda:
             tipoO.tona()
             if tipoO.onda != 0:
-                th = threading.Thread(target=lambda: sonarO(tipoO.f(hz(tipoO.hzb))))
+                plt.plot(tipoO.f(hz(tipoO.hzb, x))[:1000])
+                plt.show()
+                th = threading.Thread(target=lambda: sonarO(tipoO.f(hz(tipoO.hzb, x))))
                 th.start()
                 threads.append(th)
                 
