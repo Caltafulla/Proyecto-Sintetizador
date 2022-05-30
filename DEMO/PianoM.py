@@ -15,7 +15,7 @@ class piano:
 
     def frecuencia(self, hzb, x):
         expo = (int(self.o[x].o) - 4 + self.ob) * 12 + int(self.o[x].n) - 10 + hzb
-        return hzb * (2 ** (1 / 12)) ** expo
+        return self.hzb * (2 ** (1 / 12)) ** expo
 
     def octavab (self, i):
         if (self.ob + i <= 1 and self.ob + i >= -1):
