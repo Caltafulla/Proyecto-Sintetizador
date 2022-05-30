@@ -1,4 +1,5 @@
 #Demo
+from tarfile import REGULAR_TYPES
 from tkinter import *
 import tkinter
 from turtle import width
@@ -113,10 +114,10 @@ def reset(nmvco):
 
 def actv(vco, i):
     vco.volumen(i)
-    labelv = tkinter.Label(image= imagenv, relief = FLAT)
-    labelv.place(x = 769, y = 89)
-    labelvco1V = tkinter.Label(text = vco1.v, bg= "black", fg= "white")
-    labelvco1V.place(x = 778, y = 97)
+    labelv = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+    labelv.place(x = 732, y = 89)
+    labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
+    labelvco1V.place(x = 778, y = 94)
 
 #FONDO
 imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
@@ -125,9 +126,10 @@ label.pack()
 
 #Lables Volumen
 imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
-labelv = tkinter.Label(image= imagenv, relief = FLAT)
-labelvco1V = tkinter.Label(text = vco1.v, bg= "black", fg= "white")
-labelvco1V.place(x = 778, y = 97)
+labelv = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labelv.place(x = 732, y = 89)
+labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
+labelvco1V.place(x = 778, y = 94)
 
 #CARGA BOTONES VCO/RESET/VOLUME+-/OCTAVA
 Sine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-03.png'))
@@ -209,9 +211,9 @@ TonemnVCO3.place(x = 700, y = 329, height = 26, width = 26)
 
 #BOTONES OCTAVA ACTUAL
 Aumento = tkinter.Button(image = MásBttbig, command= lambda: piano.octavab(1), relief = FLAT, borderwidth = 0)
-Aumento.place(x = 73, y = 502, height = 37, width = 37)
+Aumento.place(x = 84, y = 510, height = 37, width = 37)
 Dismin = tkinter.Button(image = MenosBttbig, command= lambda: piano.octavab(-1), relief = FLAT, borderwidth = 0)
-Dismin.place(x = 73, y = 622, height = 37, width = 37)
+Dismin.place(x = 84, y = 610, height = 37, width = 37)
 
 #BOTONES PIANO
 #OCTAVA 1
