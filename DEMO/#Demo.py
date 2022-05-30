@@ -179,39 +179,39 @@ Rset3.place(x = 35, y = 305, height = 33, width = 33)
 
 #VCO1
 VolumemsVCO1 = tkinter.Button(image = MenosBtt, comman = lambda: actv(vco1, 5), relief = FLAT, borderwidth = 0)
-VolumemsVCO1.place(x = 868, y = 91, height = 26, width = 26)
+VolumemsVCO1.place(x = 850, y = 91, height = 26, width = 26)
 VolumemnVCO1 = tkinter.Button(image = MásBtt, comman = lambda: actv(vco1, -5), relief = FLAT, borderwidth = 0)
-VolumemnVCO1.place(x = 673, y = 91, height = 26, width = 26)
+VolumemnVCO1.place(x = 700, y = 91, height = 26, width = 26)
 TonemsVCO1 = tkinter.Button(image = MenosBtt, command = lambda: vco1.addSemi(1),relief = FLAT, borderwidth = 0)
-TonemsVCO1.place(x = 868, y = 131, height = 26, width = 26)
+TonemsVCO1.place(x = 850, y = 131, height = 26, width = 26)
 TonemnVCO1 = tkinter.Button(image = MásBtt, command = lambda: vco1.addSemi(-1), relief = FLAT, borderwidth = 0)
-TonemnVCO1.place(x = 673, y = 131, height = 26, width = 26)
+TonemnVCO1.place(x = 700, y = 131, height = 26, width = 26)
 
 #VCO2
 VolumemsVCO2 = tkinter.Button(image = MenosBtt, comman = lambda: vco2.volumen(5), relief = FLAT, borderwidth = 0)
-VolumemsVCO2.place(x = 868, y = 190, height = 26, width = 26)
+VolumemsVCO2.place(x = 850, y = 190, height = 26, width = 26)
 VolumemnVCO2 = tkinter.Button(image = MásBtt, comman = lambda: vco2.volumen(-5), relief = FLAT, borderwidth = 0)
-VolumemnVCO2.place(x = 673, y = 190, height = 26, width = 26)
+VolumemnVCO2.place(x = 700, y = 190, height = 26, width = 26)
 TonemsVCO2 = tkinter.Button(image = MenosBtt, command = lambda: vco2.addSemi(1), relief = FLAT, borderwidth = 0)
-TonemsVCO2.place(x = 868, y = 230, height = 26, width = 26)
+TonemsVCO2.place(x = 850, y = 230, height = 26, width = 26)
 TonemnVCO2 = tkinter.Button(image = MásBtt, command = lambda: vco2.addSemi(-1), relief = FLAT, borderwidth = 0)
-TonemnVCO2.place(x = 673, y = 230, height = 26, width = 26)
+TonemnVCO2.place(x = 700, y = 230, height = 26, width = 26)
 
 #VCO3
 VolumemsVCO3 = tkinter.Button(image = MenosBtt, comman = lambda: vco3.volumen(5), relief = FLAT, borderwidth = 0)
-VolumemsVCO3.place(x = 868, y = 289, height = 26, width = 26)
+VolumemsVCO3.place(x = 850, y = 289, height = 26, width = 26)
 VolumemnVCO3 = tkinter.Button(image = MásBtt, command = lambda: vco3.volumen(-5), relief = FLAT, borderwidth = 0)
-VolumemnVCO3.place(x = 673, y = 289, height = 26, width = 26)
+VolumemnVCO3.place(x = 700, y = 289, height = 26, width = 26)
 TonemsVCO3 = tkinter.Button(image = MenosBtt, command = lambda: vco3.addSemi(1), relief = FLAT, borderwidth = 0)
-TonemsVCO3.place(x = 868, y = 329, height = 26, width = 26)
+TonemsVCO3.place(x = 850, y = 329, height = 26, width = 26)
 TonemnVCO3 = tkinter.Button(image = MásBtt, command = lambda: vco3.addSemi(-1), relief = FLAT, borderwidth = 0)
-TonemnVCO3.place(x = 673, y = 329, height = 26, width = 26)
+TonemnVCO3.place(x = 700, y = 329, height = 26, width = 26)
 
 #BOTONES OCTAVA ACTUAL
 Aumento = tkinter.Button(image = MásBttbig, command= lambda: piano.octavab(1), relief = FLAT, borderwidth = 0)
-Aumento.place(x = 75, y = 502, height = 37, width = 37)
+Aumento.place(x = 73, y = 502, height = 37, width = 37)
 Dismin = tkinter.Button(image = MenosBttbig, command= lambda: piano.octavab(-1), relief = FLAT, borderwidth = 0)
-Dismin.place(x = 75, y = 622, height = 37, width = 37)
+Dismin.place(x = 73, y = 622, height = 37, width = 37)
 
 #BOTONES PIANO
 #OCTAVA 1
