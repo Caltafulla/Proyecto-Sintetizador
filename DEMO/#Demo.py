@@ -241,8 +241,6 @@ La2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.fr
 La2.place(x = 720, y = 430, height = 250, width = 50)
 Si2 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 23))
 Si2.place(x = 770, y = 430, height = 250, width = 50)
-Do3 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 24))
-Do3.place(x = 820, y = 430, height = 250, width = 50)
 
 #NEGRAS
 #OCTAVA 1
