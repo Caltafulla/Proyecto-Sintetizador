@@ -13,7 +13,7 @@ piano = p()
 
 sn = SonidoP.playN
 ventana = tkinter.Tk()
-#NOMBRE DE VENTANA
+#NOMBRE DE VENTANA.
 ventana.title("Synth")
 vco1 = VCO(0, 0 ,50 ,0, 1)
 vco2 = VCO(0, 0 ,50 ,0, 2)
