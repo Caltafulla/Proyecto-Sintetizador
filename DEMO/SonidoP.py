@@ -4,9 +4,6 @@ import threading
 import matplotlib.pyplot as plt
 
 class SonidoP():
-    def __init__(self, volume, adsr):
-        self.vol = volume
-        self.adsr = adsr
 
     def GenerarSonido(wave):
         sd.play(wave, 44100)
@@ -15,14 +12,14 @@ class SonidoP():
     def sonarO(wave):
         SonidoP.GenerarSonido(wave)
 
-    def playN(sonarO, onda, hz, x):
-        
+    def playN(sonarO, onda, hz, x, volg):
+
         threads = []
         
         for VCO in onda:
             VCO.tona()
             if VCO.onda != 0:
-                th = threading.Thread(target=lambda: sonarO(VCO.f(VCO.v, hz(VCO.hzb, x))))
+                th = threading.Thread(target=lambda: sonarO(VCO.f(VCO.v, hz(VCO.hzb, x), volg)))
                 th.start()
                 threads.append(th)
 

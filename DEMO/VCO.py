@@ -29,27 +29,27 @@ class VCO:
             self.v = self.v + i
 
 class Sine:
-    def generar(v, hz: int):
+    def generar(v, hz: int, volg):
         framerate = 44100
         time = 1000
         t =  np.linspace(0, time / 1000, int(framerate * time / 1000))
-        wave = (v/100) * (np.sin(2 * np.pi * hz * t))
+        wave = (volg/100) * ((v/100) * (np.sin(2 * np.pi * hz * t)))
         return wave
 
 
 class Square:
-    def generar(v, hz: int):
+    def generar(v, hz: int, volg):
         framerate = 44100
         time = 1000
         t = np.linspace(0, time / 1000, int(framerate * time / 1000))
-        wave = (v/100) * ((11*(np.sin((2 * np.pi * hz * t))) + 3*(np.sin((2 * np.pi * hz * t)/(1/3))) + (14/10)*(np.sin((2 * np.pi * hz * t)/(1/5))) + (7/10)*(np.sin((2 * np.pi * hz * t)/(1/7))) + (15/100)*(np.sin((2 * np.pi * hz * t)/(1/9))))/(90/10))
+        wave = (volg/100) * ((v/100) * ((11*(np.sin((2 * np.pi * hz * t))) + 3*(np.sin((2 * np.pi * hz * t)/(1/3))) + (14/10)*(np.sin((2 * np.pi * hz * t)/(1/5))) + (7/10)*(np.sin((2 * np.pi * hz * t)/(1/7))) + (15/100)*(np.sin((2 * np.pi * hz * t)/(1/9))))/(90/10)))
         return wave
 
 
 class Saw:
-    def generar(v, hz: int):
+    def generar(v, hz: int, volg):
         framerate = 44100
         time = 1000
         t = np.linspace(0, time / 1000, int(framerate * time / 1000))
-        wave = (v/100) * ((np.sin(2 * np.pi * hz * t) + (1/2)*np.sin(2 * np.pi * (hz*2) * t) + (1/3)*np.sin(2 * np.pi * (hz*3) * t) + (1/4)*np.sin(2 * np.pi * (hz*4) * t) + (1/5)*np.sin(2 * np.pi * (hz*5) * t))/(1 + (1/2)))
+        wave = (volg/100) * ((v/100) * ((np.sin(2 * np.pi * hz * t) + (1/2)*np.sin(2 * np.pi * (hz*2) * t) + (1/3)*np.sin(2 * np.pi * (hz*3) * t) + (1/4)*np.sin(2 * np.pi * (hz*4) * t) + (1/5)*np.sin(2 * np.pi * (hz*5) * t))/(1 + (1/2))))
         return wave
