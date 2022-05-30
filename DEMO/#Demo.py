@@ -213,6 +213,8 @@ LblGVol = tkinter.Label(image= DLabelPl, relief = FLAT, borderwidth = 0)
 LblGVol.place(x = 516, y = 8)
 MsGVol = tkinter.Button(image= DMásBtt, relief = FLAT, borderwidth = 0)
 MsGVol.place(x = 636, y = 10, height = 26, width = 26)
+LblGVolT = tkinter.Label(text = "xd", bg= "#141414", fg= "white")
+LblGVolT.place(x = 563, y = 11)
 
 #TONO
 MnGTone = tkinter.Button(image= DMenosBtt, relief = FLAT, borderwidth = 0)
@@ -221,6 +223,8 @@ LblGTone = tkinter.Label(image= DLabelPl, relief = FLAT, borderwidth = 0)
 LblGTone.place(x = 811, y = 8)
 MsGTone = tkinter.Button(image= DMásBtt, relief = FLAT, borderwidth = 0)
 MsGTone.place(x = 931, y = 10, height = 26, width = 26)
+LblGToneT = tkinter.Label(text = "xd", bg= "#141414", fg= "white")
+LblGToneT.place(x = 858, y = 11)
 
 #BOTONES VCO1
 
@@ -289,9 +293,11 @@ TonemnVCO3.place(x = 700, y = 329, height = 26, width = 26)
 
 #BOTONES OCTAVA ACTUAL
 Aumento = tkinter.Button(image = MásBttbig, command= lambda: piano.octavab(1), relief = FLAT, borderwidth = 0)
-Aumento.place(x = 84, y = 510, height = 37, width = 37)
+Aumento.place(x = (81.5), y = 510, height = 37, width = 37)
 Dismin = tkinter.Button(image = MenosBttbig, command= lambda: piano.octavab(-1), relief = FLAT, borderwidth = 0)
-Dismin.place(x = 84, y = 610, height = 37, width = 37)
+Dismin.place(x = (81.5), y = 610, height = 37, width = 37)
+OcvtLbl = tkinter.Label(text = "xd", bg= "#141414", fg= "white")
+OcvtLbl.place(x = (92), y = 567)
 
 #BOTONES PIANO
 #OCTAVA 1
