@@ -8,7 +8,6 @@ from setuptools import Command
 from SonidoP import SonidoP
 from VCO import VCO
 from PianoM import piano as p
-import cv2
 
 piano = p()
 
@@ -37,7 +36,7 @@ DLabelPl = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Darklblplc-21.png')
 MásBttbig = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomenobig-19.png'))
 MenosBttbig = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomenobig-20.png'))
 imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
-imagenTT = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\OctvLabel.png'))
+imagenTT = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\OctvLabel-22.png'))
 
 def asignar(num, vco, numind):
     vco.onda = num
