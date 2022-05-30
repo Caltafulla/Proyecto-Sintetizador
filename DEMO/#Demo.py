@@ -180,8 +180,29 @@ SelectedSaw = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\SynthSelected-08
 ResetBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Reload-09.png'))
 MásBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomeno-17.png'))
 MenosBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomeno-18.png'))
+DMásBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\darkmaomeno-17.png'))
+DMenosBtt = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\darkmaomeno-18.png'))
+DLabelPl = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Darklblplc-21.png'))
 MásBttbig = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomenobig-19.png'))
 MenosBttbig = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomenobig-20.png'))
+
+#VOLUMEN/TONO GENERAL
+
+#VOLUMEN
+MnGVol = tkinter.Button(image= DMenosBtt, relief = FLAT, borderwidth = 0)
+MnGVol.place(x = 480, y = 10, height = 26, width = 26)
+LblGVol = tkinter.Label(image= DLabelPl, relief = FLAT, borderwidth = 0)
+LblGVol.place(x = 516, y = 8)
+MsGVol = tkinter.Button(image= DMásBtt, relief = FLAT, borderwidth = 0)
+MsGVol.place(x = 636, y = 10, height = 26, width = 26)
+
+#TONO
+MnGTone = tkinter.Button(image= DMenosBtt, relief = FLAT, borderwidth = 0)
+MnGTone.place(x = 775, y = 10, height = 26, width = 26)
+LblGTone = tkinter.Label(image= DLabelPl, relief = FLAT, borderwidth = 0)
+LblGTone.place(x = 811, y = 8)
+MsGTone = tkinter.Button(image= DMásBtt, relief = FLAT, borderwidth = 0)
+MsGTone.place(x = 931, y = 10, height = 26, width = 26)
 
 #BOTONES VCO1
 
