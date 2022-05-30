@@ -16,5 +16,5 @@ class piano:
         return 440 * (2 ** (1 / 12)) ** expo
 
     def octavab (self, i):
-        if (self.ob + i <= 2 and self.ob + i >= -2):
+        if (self.ob + i <= 1 and self.ob + i >= -1):
             self.ob = self.ob + i
