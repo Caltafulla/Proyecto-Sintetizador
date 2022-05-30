@@ -114,8 +114,8 @@ def reset(nmvco):
 
 def actv(vco, i):
     vco.volumen(i)
-    labelv = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
-    labelv.place(x = 732, y = 89)
+    labelv1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+    labelv1.place(x = 732, y = 89)
     labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
     labelvco1V.place(x = 778, y = 94)
 
@@ -126,10 +126,32 @@ label.pack()
 
 #Lables Volumen
 imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
-labelv = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
-labelv.place(x = 732, y = 89)
+labelv1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labelv1.place(x = 732, y = 89)
 labelvco1V = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
 labelvco1V.place(x = 778, y = 94)
+labelv2 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labelv2.place(x = 732, y = 188)
+labelvco2V = tkinter.Label(text = vco2.v, bg= "#141414", fg= "white")
+labelvco2V.place(x = 778, y = 194)
+labelv3 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labelv3.place(x = 732, y = 287)
+labelvco3V = tkinter.Label(text = vco3.v, bg= "#141414", fg= "white")
+labelvco3V.place(x = 778, y = 293)
+
+#Labels Tono 
+labetn1 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labetn1.place(x = 732, y = 129)
+labelvco1T = tkinter.Label(text = vco1.v, bg= "#141414", fg= "white")
+labelvco1T.place(x = 778, y = 135)
+labetn2 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labetn2.place(x = 732, y = 228)
+labelvco2T = tkinter.Label(text = vco2.v, bg= "#141414", fg= "white")
+labelvco2T.place(x = 778, y = 234)
+labetn3 = tkinter.Label(image= imagenv, relief = FLAT, borderwidth = 0)
+labetn3.place(x = 732, y = 327)
+labelvco3T = tkinter.Label(text = vco3.v, bg= "#141414", fg= "white")
+labelvco3T.place(x = 778, y = 333)
 
 #CARGA BOTONES VCO/RESET/VOLUME+-/OCTAVA
 Sine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-03.png'))
