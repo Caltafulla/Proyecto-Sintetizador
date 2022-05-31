@@ -342,19 +342,19 @@ OcvtLbl.place(x = (92), y = 567)
 
 #BOTONES PIANO
 #OCTAVA 1
-Do1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 0, piano.vol))
+Do1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 0, piano.vol, piano.brillo))
 Do1.place(x = 200, y = 430, height = 250, width = 50)
-Re1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 2, piano.vol))
+Re1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 2, piano.vol, piano.brillo))
 Re1.place(x = 250, y = 430, height = 250, width = 50)
-Mi1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 4, piano.vol))
+Mi1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 4, piano.vol, piano.brillo))
 Mi1.place(x = 300, y = 430, height = 250, width = 50)
-Fa1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 5, piano.vol))
+Fa1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 5, piano.vol, piano.brillo))
 Fa1.place(x = 350, y = 430, height = 250, width = 50)
-Sol1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 7, piano.vol))
+Sol1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 7, piano.vol, piano.brillo))
 Sol1.place(x = 400, y = 430, height = 250, width = 50)
-La1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 9, piano.vol))
+La1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 9, piano.vol, piano.brillo))
 La1.place(x = 450, y = 430, height = 250, width = 50)
-Si1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 11, piano.vol))
+Si1 = tkinter.Button(ventana, command= lambda: sn(SonidoP.sonarO, vcog, piano.frecuencia, 11, piano.vol, piano.brillo))
 Si1.place(x = 500, y = 430, height = 250, width = 50)
 
 #OCTAVA 2
