@@ -44,7 +44,7 @@ PlayG = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Play-14.png'))
 PauseB = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Pause-16.png'))
 PauseG = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Pause-15.png'))
 On = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\On-Off-23.png'))
-Off = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\On-Off-23.png'))
+Off = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\On-Off-24.png'))
 
 def asignar(num, vco, numind):
     vco.onda = num
