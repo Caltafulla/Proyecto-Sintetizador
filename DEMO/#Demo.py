@@ -20,7 +20,7 @@ vco2 = VCO(0, 0 ,50 ,0, 2)
 vco3 = VCO(0, 0 ,50 ,0, 3)
 vcog = [vco1, vco2, vco3]
 
-#CARGA IMAGENES DE BOTONES VCO/RESET/VOLUME+-/OCTAVA
+#CARGA IMAGENES DE BOTONES 
 Sine = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-03.png'))
 Square = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-04.png'))
 Saw = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Synth-05.png'))
@@ -37,6 +37,12 @@ MásBttbig = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomenobig-19.png
 MenosBttbig = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\maomenobig-20.png'))
 imagenv = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\lblplc-21.png'))
 imagenTT = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\OctvLabel-22.png'))
+RecordB = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Record-11.png'))
+RecordS = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Record-12.png'))
+PlayB = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Play-13.png'))
+PlayG = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Play-14.png'))
+PauseB = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Pause-16.png'))
+PauseG = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Pause-15.png'))
 
 def asignar(num, vco, numind):
     vco.onda = num
@@ -194,6 +200,14 @@ def acttG(piano, i):
 imagen = ImageTk.PhotoImage(Image.open(r'DEMO\ImageSources\Fondo_Mesa de trabajo 1 copia.png'))
 label = tkinter.Label(image=imagen)
 label.pack()
+
+#BOTONES DE CONTROL DE REPRODUCCIÓN
+InitRec = tkinter.Button(image= RecordB, relief = FLAT, borderwidth = 0)
+InitRec.place(x = 60, y = 10, height = 21, width = 21)
+InitPlay = tkinter.Button(image= PlayB, relief = FLAT, borderwidth = 0)
+InitPlay.place(x = 90, y = 10, height = 21, width = 21)
+InitPause = tkinter.Button(image= PauseB, relief = FLAT, borderwidth = 0)
+InitPause.place(x = 120, y = 10, height = 21, width = 21)
 
 #Lables Volumen
 #VCO1
