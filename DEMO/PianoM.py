@@ -13,6 +13,7 @@ class piano:
         self.hzb = hzb
         self.semitone = semitone
         self.vol = vol
+        self.brillo = True
 
     def frecuencia(self, semitone, x):
         expo = (int(self.o[x].o) - 4 + self.ob) * 12 + int(self.o[x].n) - 10 + semitone
