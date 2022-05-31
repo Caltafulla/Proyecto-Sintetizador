@@ -211,6 +211,10 @@ InitPlay.place(x = 90, y = 10, height = 21, width = 21)
 InitPause = tkinter.Button(image= PauseB, relief = FLAT, borderwidth = 0)
 InitPause.place(x = 120, y = 10, height = 21, width = 21)
 
+#BOTONES ON OFF
+OffBtt = tkinter.Button(image= Off, relief = FLAT, borderwidth = 0)
+OffBtt.place(x = 920, y = 520, height = 40, width = 40)
+OnBtt = tkinter.Button(image= On, relief = FLAT, borderwidth = 0)
 
 #VOLUMEN/TONO GENERAL
 
