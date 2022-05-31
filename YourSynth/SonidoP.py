@@ -28,10 +28,8 @@ class SonidoP():
                 threads.append(th)
 
         if (brillo):
-            g.recording(temp)
             sonarO(temp)
 
         else:
-            g.recording(temp)
             for th in threads:
                 th.join()
