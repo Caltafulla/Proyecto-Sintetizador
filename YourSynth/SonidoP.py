@@ -1,7 +1,6 @@
 import sounddevice as sd
 from VCO import Sine, Square, Saw
 import threading
-from grabadora import grabadora
 import numpy as np
 
 class SonidoP():
@@ -15,9 +14,6 @@ class SonidoP():
 
     def playN(sonarO, onda, hz, x, volg, brillo):
         threads = []
-        g = grabadora()
-        framerate = 44100
-        time = 1000
         temp =  0
         for VCO in onda:
             VCO.tona()
