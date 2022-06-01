@@ -10,15 +10,15 @@ class VCO:
         self.timbre = timbre
         self.v = volumenRL
         self.onda = onda
-        self.f = None
+        self.Wave = None
 
     def tona(self):
         if (self.onda == 1):
-            self.f = Sine.generar
+            self.Wave = Sine.generar
         elif (self.onda == 2):
-            self.f = Square.generar
+            self.Wave = Square.generar
         elif (self.onda == 3):
-            self.f = Saw.generar
+            self.Wave = Saw.generar
 
     def addSemi(self, semi):
         if (self.hzb + semi <= 12 and self.hzb + semi >= -12):

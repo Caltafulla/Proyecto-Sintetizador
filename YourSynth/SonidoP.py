@@ -18,8 +18,8 @@ class SonidoP():
         for VCO in onda:
             VCO.tona()
             if VCO.onda != 0:
-                temp = temp + VCO.f(VCO.v, hz(VCO.hzb, x), volg)
-                th = threading.Thread(target=lambda: sonarO(VCO.f(VCO.v, hz(VCO.hzb, x), volg)))
+                temp = temp + VCO.Wave(VCO.v, hz(VCO.hzb, x), volg)
+                th = threading.Thread(target=lambda: sonarO(VCO.Wave(VCO.v, hz(VCO.hzb, x), volg)))
                 th.start()
                 threads.append(th)
 
