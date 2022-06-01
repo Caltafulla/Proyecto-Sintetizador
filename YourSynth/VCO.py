@@ -1,13 +1,13 @@
+#importar librerias y modulas para poder realizar las diferentes funciones
+
 import sounddevice as sd
 import numpy as np
 
 class VCO:
 
-    def __init__(self, valoro, timbre, volumenRL, onda, num, hzb = 0):
+    def __init__(self, volumenRL, num, onda = 0, hzb = 0):
         self.numvco = num
         self.hzb = hzb
-        self.vo = valoro
-        self.timbre = timbre
         self.v = volumenRL
         self.onda = onda
         self.Wave = None

@@ -1,4 +1,5 @@
-#Demo
+#importar librerias y modulas para poder realizar las diferentes funciones
+
 from tarfile import REGULAR_TYPES
 from tkinter import *
 import tkinter
@@ -10,20 +11,18 @@ from VCO import VCO
 from PianoM import piano as p
 from filtros import filter
 
+#Inicializacion de variables
 piano = p()
-
 sn = SonidoP.playN
 ventana = tkinter.Tk()
-
-vco1 = VCO(0, 0 ,50 ,0, 1)
-vco2 = VCO(0, 0 ,50 ,0, 2)
-vco3 = VCO(0, 0 ,50 ,0, 3)
+vco1 = VCO(50, 1)
+vco2 = VCO(50, 2)
+vco3 = VCO(50, 3)
 vcog = [vco1, vco2, vco3]
-
 fl = filter()
 
 #NOMBRE DE VENTANA.
-ventana.title("Synth")
+ventana.title("YourSynth")
 
 #CARGA IMAGENES DE BOTONES 
 Sine = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Synth-03.png'))
