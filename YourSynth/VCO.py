@@ -5,6 +5,12 @@ import numpy as np
 
 class VCO:
 
+    #Contructor de la clase VCO
+    # numvco= Numero del VCO (Cual VCO es)
+    # hzb= Frecuencia base del VCO
+    # v= Volumen del VCO
+    # onda= Tipo de onda (1. Seno, 2. Cuadrada, 3. Sierra)
+    # wave= Funcion de la onda
     def __init__(self, volumenRL, num, onda = 0, hzb = 0):
         self.numvco = num
         self.hzb = hzb
@@ -12,6 +18,7 @@ class VCO:
         self.onda = onda
         self.Wave = None
 
+    #Metodo que nos devuelve cual sera la formula a utilizar dependiendo del tipo de onda
     def tona(self):
         if (self.onda == 1):
             self.Wave = Sine.generar
@@ -20,15 +27,19 @@ class VCO:
         elif (self.onda == 3):
             self.Wave = Saw.generar
 
+    #Metodo para aumentar o disminuir el atributo semitonos del VCO dependiendo el parametro "semi"
     def addSemi(self, semi):
         if (self.hzb + semi <= 12 and self.hzb + semi >= -12):
             self.hzb = self.hzb + semi
 
+    #Metodo para aumentar o disminuir el atributo "v" dependiendo del parametro "i"
     def volumen(self, i):
         if (self.v + i <= 100 and self.v + i >= 0):
             self.v = self.v + i
 
 class Sine:
+    #Devuelve un arreglo dependiendo al volumen del vco (v), al volumen general (volg) y la 
+    #Frecuencia ingresada por parametros(hz)
     def generar(v, hz: int, volg):
         framerate = 44100
         time = 1000
@@ -38,6 +49,8 @@ class Sine:
 
 
 class Square:
+    #Devuelve un arreglo dependiendo al volumen del vco (v), al volumen general (volg) y la 
+    #Frecuencia ingresada por parametros(hz)
     def generar(v, hz: int, volg):
         framerate = 44100
         time = 1000
@@ -47,6 +60,8 @@ class Square:
 
 
 class Saw:
+    #Devuelve un arreglo dependiendo al volumen del vco (v), al volumen general (volg) y la 
+    #Frecuencia ingresada por parametros(hz)
     def generar(v, hz: int, volg):
         framerate = 44100
         time = 1000
