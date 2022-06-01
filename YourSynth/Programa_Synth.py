@@ -4,13 +4,13 @@ from xmlrpc.client import boolean
 import pygame
 from VCO import VCO
 from PianoM import piano
-from SonidoP import Sonido as sp
+from SonidoP import SonidoP as sp
 import sounddevice as sd
 
 #Variables Globales
-vco1 = VCO(0, 0, 0, 0)
-vco2 = VCO(0, 0, 0, 0)
-vco3 = VCO(0, 0, 0, 0)
+vco1 = VCO(0, 0, 0, 0, 0)
+vco2 = VCO(0, 0, 0, 0, 0)
+vco3 = VCO(0, 0, 0, 0, 0)
 posx = 0
 White = (255,255,255)
 Negro = (33,33,33)

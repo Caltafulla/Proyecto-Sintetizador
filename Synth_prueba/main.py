@@ -1,4 +1,5 @@
 #%%
+#importar librerias y modulas para poder realizar las diferentes funciones
 
 import tkinter
 import matplotlib.pyplot as plt
