@@ -42,12 +42,6 @@ MásBttbig = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\maomenobig-1
 MenosBttbig = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\maomenobig-20.png'))
 imagenv = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\lblplc-21.png'))
 imagenTT = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\OctvLabel-22.png'))
-RecordB = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Record-11.png'))
-RecordS = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Record-12.png'))
-PlayB = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Play-13.png'))
-PlayG = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Play-14.png'))
-PauseB = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Pause-16.png'))
-PauseG = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Pause-15.png'))
 On = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\On-Off-23.png'))
 Off = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\On-Off-24.png'))
 
@@ -217,17 +211,10 @@ imagen = ImageTk.PhotoImage(Image.open(r'YourSynth\ImageSources\Fondo_Mesa de tr
 label = tkinter.Label(image=imagen)
 label.pack()
 
-#BOTONES DE CONTROL DE REPRODUCCIÓN
-InitRec = tkinter.Button(image= RecordB, relief = FLAT, borderwidth = 0)
-InitRec.place(x = 60, y = 10, height = 21, width = 21)
-InitPlay = tkinter.Button(image= PlayB, relief = FLAT, borderwidth = 0)
-InitPlay.place(x = 90, y = 10, height = 21, width = 21)
-InitPause = tkinter.Button(image= PauseB, relief = FLAT, borderwidth = 0)
-InitPause.place(x = 120, y = 10, height = 21, width = 21)
-
 #BOTONES ON OFF
 OffBtt = tkinter.Button(image= Off, command = brilloOn, relief = FLAT, borderwidth = 0)
 OffBtt.place(x = 920, y = 520, height = 40, width = 40)
+OnBtt = tkinter.Button(image= On, relief = FLAT, borderwidth = 0)
 
 #VOLUMEN/TONO GENERAL
 
